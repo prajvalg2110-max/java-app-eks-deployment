@@ -1,74 +1,19 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Student Info</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
-            padding: 40px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            display: inline-block;
-            background-color: white;
-            padding: 25px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: left;
-            max-width: 400px;
-        }
-
-        p {
-            margin: 10px 0;
-            font-size: 16px;
-            color: #444;
-        }
-
-        span {
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        .not-found {
-            color: red;
-            font-weight: bold;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        a:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+<head><title>Student Info</title></head>
 <body>
 <h2>Student Info</h2>
-
-<div class="card" th:if="${student != null}">
+<div th:if="${student != null}">
     <p><b>Roll No:</b> <span th:text="${student.rollNo}"></span></p>
     <p><b>Name:</b> <span th:text="${student.name}"></span></p>
     <p><b>Semester:</b> <span th:text="${student.semester}"></span></p>
     <p><b>CGPA:</b> <span th:text="${student.cgpa}"></span></p>
     <p><b>Phone:</b> <span th:text="${student.phoneNumber}"></span></p>
 </div>
-
-<p class="not-found" th:if="${student == null}">No student found.</p>
-
+<div th:if="${student == null}">
+    <p>No student found.</p>
+</div>
 <a href="/">Back</a>
 </body>
 </html>

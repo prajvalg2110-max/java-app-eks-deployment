@@ -1,63 +1,7 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Student CRUD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            padding: 40px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        form, .button-group {
-            background: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 400px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        input {
-            padding: 10px;
-            width: calc(100% - 22px);
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .button-group a {
-            display: block;
-            margin: 10px 0;
-        }
-
-        p {
-            margin-top: 20px;
-            color: green;
-            font-weight: bold;
-        }
-    </style>
-</head>
+<head><title>Student CRUD</title></head>
 <body>
 <h2>Student Management</h2>
 
@@ -75,9 +19,7 @@
     <button type="submit">Delete Student</button>
 </form>
 
-<div class="button-group">
-    <a href="/display"><button type="button">Display All Students</button></a>
-</div>
+<a href="/display"><button>Display All Students</button></a>
 
 <form action="/display/" method="get" onsubmit="event.preventDefault(); window.location='/display/' + this.rollNo.value;">
     <input name="rollNo" placeholder="Roll No" required />
