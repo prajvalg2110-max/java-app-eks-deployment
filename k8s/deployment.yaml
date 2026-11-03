@@ -1,0 +1,26 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: java-student-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: java-student-app
+
+  template:
+    metadata:
+      labels:
+        app: java-student-app
+
+    spec:
+      containers:
+        - name: app
+          image: 427064007413.dkr.ecr.ap-south-2.amazonaws.com/student-management-app:9
+          ports:
+            - containerPort: 8080
+              protocol: TCP
